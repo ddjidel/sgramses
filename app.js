@@ -10,8 +10,8 @@ var dblist = monk('127.0.0.1:27017/Ramses');
 
 var app = express();
 
-// var dbname = 'mongodb://heroku:5f392e167593551b92a4a692ac3e28ca@paulo.mongohq.com:10078/app19458931';
-var dbname = 'Ramses';
+var dbname = 'mongodb://heroku:a0e549cf9302260c3aae1a80002223a8@dharma.mongohq.com:10026/app19725356';
+// var dbname = 'Ramses';
 var collections = ['rackData'];
 var db = require('mongojs').connect(dbname, collections);
 
