@@ -6,7 +6,7 @@ var http = require('http');
 var path = require('path');
 var mongo = require('mongodb');
 var monk = require('monk');
-var dblist = monk('dharma.mongohq.com:10026/app19725356');
+var dblist = monk('mongodb://heroku:a0e549cf9302260c3aae1a80002223a8@dharma.mongohq.com:10026/app19725356');
 // var dblist = monk('127.0.0.1:27017/Ramses');
 
 var app = express();
