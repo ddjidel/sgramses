@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1.
+        Rack List
+    ul
+        each rack, i in racklist
+            li
+                #{rack.barcode + ' : ' + rack.status}

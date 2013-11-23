@@ -1,0 +1,15 @@
+{
+  "name": "ramses",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "mongojs": "~0.9.6",
+    "mongodb": "*",
+    "monk": "*"
+  }
+}
