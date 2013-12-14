@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/racks', function (req, res) { db.rackData.find( {}, function (err, racks) { if (err) { throw error } res.json(racks); }); });
 app.get('/rack/:id', function (req, res) { var id = req.params.id; db.rackData.find( { "_id" : id }, function (err, rack) { if (err) { throw err } res.json(rack); }); });
 app.post('/racks', function (req, res) { var rack = res.json(req.body); db.rackData.save(rack); });
-app.post('/rack/:id/:barcode/:racktype/:status/:timestamp', function (req, res) { var id = req.params.id; var barcode = req.params.barcode; var racktype = req.params.racktype; var status = req.params.status; db.rackData.save( { _id: id, barcode: barcode, racktype: racktype, status: status }); });
+app.post('/rack/:id/:barcode/:racktype/:status/:timestamp', function (req, res) { var id = req.params.id; var barcode = req.params.barcode; var racktype = req.params.racktype; var status = req.params.status; var timestamp = req.params.timestamp; db.rackData.save( { _id: id, barcode: barcode, racktype: racktype, status: status, timestamp: timestamp }); });
 
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
