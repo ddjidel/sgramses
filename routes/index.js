@@ -14,6 +14,6 @@ exports.racklist = function(db) {
             res.render('racklist', {
                 "racklist" : docs
             });
-        }).sort({ barcode: 1 });
+        });
     };
 };
